@@ -16,9 +16,11 @@ export const reset = () => ({
   type: RESET,
 });
 
-const initialState = [];
+const initialState = {
+  history: [],
+};
 
-const counterReducer = (state = { history: initialState }, action) => {
+const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return {
